@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.entry.User;
 import com.example.service.UserService;
 
 @RestController
@@ -20,4 +21,8 @@ public class HelloController {
 public int add(String id, String name, String password, int status) {
 	return UserService.add(id, name, password, status);
 }
+	@RequestMapping("/s")
+	public User s(String id, String name, String password, int status) {
+		return UserService.selectUser();
+	}
 }

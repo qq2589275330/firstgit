@@ -6,5 +6,6 @@ public static void main(String[] args) {
 	a=4;
 	b=0;
 	c=b;
-	System.out.println(a/c);
+	
+	System.out.println(a/c+6);
 }}
